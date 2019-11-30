@@ -1,121 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portfolio Wanderson</title>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<title></title>
+
 	<style type="text/css">
-		body { 
-		margin: 0;
-		background-color: #f0f8ff73;
-
-		}
-		div#topoDiv
+		button
 		{
-			width: 100%;
-   			height: 133px;
-    		background-color: #080706e3;
-    		margin-top: 0px;
-    		position: absolute;
-    		z-index: -1;
-    		top: 0px;
-		}
-		div#informacoes
-		{
-			margin: 0 auto;
-			text-align: center;
-			margin-top: 20px;
-		}
-
-		img#foto_perfil
-		{
-			    border-radius: 50%;
-    			width: 200px;
-    			height: 200px;
-    			object-fit: cover;
-    			box-shadow: 0px 0px 0px 5px #232221;
-   				border-style: ridge;
-		}
-		div#detalhesDiv
-		{
-			margin: 0 auto;
-            margin-top: 10px;
-		}
-		span#detalhes
-		{
-			font-size: x-large;
-		    font-family: 'Open Sans', sans-serif;
-		}
-		span#DLocal
-		{
-			font-family: 'Open Sans', sans-serif;
-    		font-style: italic;
-    		color: #000000eb;
-		}
-		span#DIdade
-		{
-			font-family: 'Open Sans', sans-serif;	
-		}
-
-		span#biografiaID
-		{
-          
-    		color: #292525;
-    		padding-top: 6px;
-    		padding-bottom: 7px;
-    		padding-left: 6px;
-    		padding-right: 5px;
-    		text-align: center;
-    		margin-left: 0px;
-    		margin-top: 0px;
-    		margin-bottom: 1px;
-    		border-bottom-width: 5px;
-    		position: relative;
-    		bottom: 28px;
-    		font-style: initial;
-    		font-size: larger;
-
-		}
-		div#biografia
-		{
-			font-family: 'Open Sans', sans-serif;
-    height: 294px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 60px;
-    padding-top: 1px;
-    border-top-width: 2px;
-    background-color: #4242420a;
-    border-right-width: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-style: solid;
-    border-color: #404b5494;
-
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;
 		}
 
 	</style>
 </head>
-
 <body>
 
-    <div id="topoDiv"></div>
-	<div id="informacoes" class = "informacoes">
-		<img alt="avatar" id="foto_perfil" src="https://instagram.fgru6-1.fna.fbcdn.net/vp/84abfe636a255b085150df921b2c748b/5D669BC0/t51.2885-15/sh0.08/e35/s640x640/42150458_695833620787840_9170805686398352138_n.jpg?_nc_ht=instagram.fgru6-1.fna.fbcdn.net">
 
-		<div id="detalhesDiv"></div>
-			<span id="detalhes">Wanderson Rodrigo</span>
-			<br>
-			<span id="DLocal">São Paulo - Brasil</span>
-			<br>
-			<span id="DIdade">21 anos</span>
-	    </div>
+<button onclick="enviar()">Atualizar</button>
+<span id="texto"></span>
 
-	    <div id="biografia">
-	    	<span id="biografiaID"></span>
-	    	
-	    </div>
+<script type="text/javascript">
 
+$(document).ready(function(){
+  
 
+  $.get('https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289', null, function(text){
+    alert($(text).find('#h1'));
 
+});
 
+  console.log("AAAAAAAAAAAAA");
+});
+	// document.getElementsByClassName("btn btn-info btn-xs row-edit ng-scope")[0].click()
+	// document.getElementsByClassName("form-control input-xs ng-valid ng-isolate-scope ng-not-empty ng-valid-maxlength ng-dirty ng-valid-parse ng-touched")[0].value
+
+</script>
 </body>
 </html>
