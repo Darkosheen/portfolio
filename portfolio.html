@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="jquery-3.4.1.min.js"></script>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<title></title>
 
 	<style type="text/css">
@@ -27,22 +28,35 @@
 
 <button onclick="enviar()">Atualizar</button>
 <span id="texto"></span>
-
+<iframe src="https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289" style="display:block"></iframe>
 <script type="text/javascript">
 
-$(document).ready(function(){
-  
 
-  $.get('https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289', null, function(text){
-    alert($(text).find('#h1'));
+window.onload = function(){
 
-});
+  $.ajax("https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289",{
+    success: function(response) {
 
-  console.log("AAAAAAAAAAAAA");
-});
+        $("#buy-box").html(response);
+        console.log(response);
+
+
+    }
+  }); 
+
+}
+
+
+
 	// document.getElementsByClassName("btn btn-info btn-xs row-edit ng-scope")[0].click()
 	// document.getElementsByClassName("form-control input-xs ng-valid ng-isolate-scope ng-not-empty ng-valid-maxlength ng-dirty ng-valid-parse ng-touched")[0].value
 
 </script>
 </body>
 </html>
+
+
+
+
+
+
