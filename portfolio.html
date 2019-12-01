@@ -28,21 +28,44 @@
 
 <button onclick="enviar()">Atualizar</button>
 <span id="texto"></span>
-<iframe src="https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289" style="display:block"></iframe>
+
 <script type="text/javascript">
 
-
+var request = new XMLHttpRequest();
 window.onload = function(){
 
-  $.ajax("https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289",{
-    success: function(response) {
+ //var request = new XMLHttpRequest();
+ request.open('GET','https://www.trevizo.com.br/',true);
+ request.responseType = "blob";
+ request.send();
+ request.addEventListener("load", Sim, false);
 
-        $("#buy-box").html(response);
-        console.log(response);
+
+}
+
+function Sim(evt)
+{
+ 
+reader = new FileReader();
+reader.readAsBinaryString(request.response);
+reader.onload = function(){
+
+a = reader.result;
+
+console.log(a);
+
+}
 
 
-    }
-  }); 
+  // $.ajax("https://www.netshoes.com.br/amino-hd-1011-bcaa-60-tabletes-sem+sabor-LGP-0161-289",{
+  //   success: function(response) {
+
+  //       $("#buy-box").html(response);
+  //       console.log(response);
+
+
+  //   }
+  // }); 
 
 }
 
